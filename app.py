@@ -15,48 +15,68 @@ def configure_gemini():
     genai.configure(api_key=API_KEY)
 
 def apply_custom_css():
-    """Applies festive styling for a clean, modern UI."""
+    """Applies a premium dark festive styling for a modern UI."""
     st.markdown("""
         <style>
-        /* Main background */
+        /* Main background - Deep Emerald Dark Mode */
         .stApp {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            background: linear-gradient(180deg, #022c22 0%, #064e3b 100%);
+            color: #f8fafc;
         }
         
-        /* Input card styling */
-        .stTextInput, .stSelectbox, .stTextArea {
-            border-radius: 12px !important;
+        /* Make all standard text white/off-white */
+        h1, h2, h3, h4, h5, h6, p, span, label {
+            color: #f8fafc !important;
         }
 
-        /* Button styling */
+        /* Input card styling */
+        .stTextInput > div > div > input, 
+        .stSelectbox > div > div > div, 
+        .stTextArea > div > div > textarea {
+            background-color: #065f46 !important;
+            color: white !important;
+            border-radius: 12px !important;
+            border: 1px solid #10b981 !important;
+        }
+
+        /* Button styling - Gold Gradient */
         div.stButton > button:first-child {
-            background: linear-gradient(90deg, #166534 0%, #15803d 100%);
-            color: white;
+            background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+            color: #022c22;
             padding: 12px 24px;
             border-radius: 12px;
             border: none;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             width: 100%;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
         div.stButton > button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(22, 101, 52, 0.2);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+            color: #022c22;
+            border: none;
         }
 
-        /* Result container styling */
+        /* Result container styling - Translucent Glassmorphism */
         .greeting-card {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
             padding: 2.5rem;
             border-radius: 20px;
-            border-left: 8px solid #16a34a;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-            color: #14532d;
-            font-size: 1.1rem;
-            line-height: 1.6;
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            color: #fef08a; /* Soft Gold text */
+            font-size: 1.15rem;
+            line-height: 1.7;
             margin-top: 2rem;
             white-space: pre-wrap;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Divider color */
+        hr {
+            border-color: rgba(250, 204, 21, 0.2) !important;
         }
         </style>
     """, unsafe_allow_html=True)
