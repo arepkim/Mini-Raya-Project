@@ -105,7 +105,7 @@ def get_model_response(name, tone, details):
     - Context: {details if details else "A general wish for forgiveness and celebration."}
     
     Requirements:
-    1. Language: Use a natural, expressive mix of Malay and English (Malaysian/Singaporean vernacular).
+    1. Language: Strictly use Malay. Do not include any English words or phrases.
     2. Essential Phrase: Include "Selamat Hari Raya Aidilfitri, Maaf Zahir dan Batin".
     3. Emotion: Ensure it feels human-written, festive, and heartfelt.
     4. Format: Do not include meta-text (like "Here is your greeting"). Start directly with the wish.
