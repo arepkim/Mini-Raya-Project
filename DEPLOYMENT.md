@@ -76,3 +76,21 @@ Your app will fail at first because it won't find the `.env` file. You must add 
 
 ---
 *Created with ❤️ for Hari Raya Aidilfitri*
+
+1. Make the change locally
+  Open your app.py in VS Code, change the text, add a new feature, or tweak the CSS. Save the file and test it locally first by running:
+   1 streamlit run app.py
+
+
+  2. Push the changes to GitHub
+  Once you are happy with the changes, run these 3 commands in your terminal:
+
+
+   1 # 1. Stage the changes
+   2 git add .
+   3
+   4 # 2. Describe what you changed
+   5 git commit -m "Updated festive styling and added new tones"
+   6
+   7 # 3. Upload to GitHub
+   8 git push origin main
